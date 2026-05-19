@@ -10,7 +10,7 @@ type AccountService struct {
 	//
 }
 
-func NewAccountService(app *galio.Application) *AccountService {
+func NewAccountService(app *galio.App) *AccountService {
 	return &AccountService{
 		//
 	}

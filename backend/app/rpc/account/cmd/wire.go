@@ -10,7 +10,7 @@ import (
 	"github.com/qhai-dev/galio/rpc/account/server"
 )
 
-func initializer(*galio.Application) error {
+func initialize(*galio.App) error {
 	wire.Build(
 		server.ProviderSet,
 	)

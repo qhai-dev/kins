@@ -1,13 +1,21 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/qhai-dev/galio/library/galio"
 )
 
 func main() {
 	app := galio.New()
 
-	// 	err := initialize(app)
+	app.OnStart(func() {
+		initialize(app)
+	})
+
+	app.OnStop(func() {
+		fmt.Println("stop clearup")
+	})
 
 	app.Run()
 }

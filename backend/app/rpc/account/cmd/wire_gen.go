@@ -14,8 +14,8 @@ import (
 
 // Injectors from wire.go:
 
-func initializer(application *galio.Application) error {
-	accountService := handler.NewAccountService(application)
+func initialize(app *galio.App) error {
+	accountService := handler.NewAccountService(app)
 	error2 := server.NewRPCServer(accountService)
 	return error2
 }
