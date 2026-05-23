@@ -1,4 +1,4 @@
-module github.com/qhai-dev/galio/rpc/account
+module github.com/qhai-dev/galio/service/account
 
 go 1.26.1
 

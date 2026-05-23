@@ -1,8 +1,8 @@
-package server
+package rpc
 
 import (
 	"github.com/google/wire"
-	"github.com/qhai-dev/galio/rpc/account/server/handler"
+	"github.com/qhai-dev/galio/service/account/rpc/handler"
 )
 
 var ProviderSet = wire.NewSet(

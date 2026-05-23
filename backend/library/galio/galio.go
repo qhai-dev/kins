@@ -19,7 +19,6 @@ type App struct {
 	conf *viper.Viper
 
 	startHooks []func()
-	stopHooks  []func()
 
 	mu sync.Mutex
 }
@@ -41,13 +40,9 @@ func (app *App) OnStart(hook func()) {
 	app.startHooks = append(app.startHooks, hook)
 }
 
-// app destroy hook
-func (app *App) OnStop(hook func()) {
-	app.stopHooks = append(app.stopHooks, hook)
-}
-
 func (app *App) Run() {
 	app.runStartHooks(app.ctx)
+
 	fmt.Println("appliaction run start")
 
 	app.runStartShutdown(app.ctx)
@@ -59,18 +54,8 @@ func (app *App) Shutdown(ctx context.Context) error {
 	return nil
 }
 
-// runStartHooks runs the application start hooks.
 func (app *App) runStartHooks(ctx context.Context) error {
 	for _, hook := range app.startHooks {
-		hook()
-	}
-
-	return nil
-}
-
-// runStopHooks runs the application stop hooks.
-func (app *App) runStopHooks(ctx context.Context) error {
-	for _, hook := range app.stopHooks {
 		hook()
 	}
 

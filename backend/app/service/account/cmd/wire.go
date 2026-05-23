@@ -7,7 +7,7 @@ import (
 	"github.com/google/wire"
 
 	"github.com/qhai-dev/galio/library/galio"
-	"github.com/qhai-dev/galio/rpc/account/server"
+	server "github.com/qhai-dev/galio/service/account/rpc"
 )
 
 func initialize(*galio.App) error {
