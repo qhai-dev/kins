@@ -2,15 +2,18 @@ package framework
 
 import (
 	"context"
+	"fmt"
 	"net/http"
+	"os"
 	"sync"
 
+	"github.com/qhai-dev/kairo/library/framework/conf"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 )
 
 type App struct {
-	ctx context.Context
+	opts options
 
 	gs   *grpc.Server
 	rs   *http.Server
@@ -22,24 +25,31 @@ type App struct {
 	mu sync.Mutex
 }
 
-func New() *App {
-	app := &App{
-		ctx: context.Background(),
+func New(opts ...Option) *App {
+	o := options{
+		ctx:     context.Background(),
+		version: "v1.0.0",
 	}
+
+	for _, opt := range opts {
+		opt(&o)
+	}
+
+	app := &App{
+		opts: o,
+	}
+
+	app.conf = conf.New()
 
 	// 初始化 conf
 	// 初始化 logger
 	// 初始化 rpc / rest
-	//
 
 	return app
 }
 
 func (app *App) Run() {
-	err := app.runStartHooks()
-	if err != nil {
-		panic(err)
-	}
+	fmt.Printf("app name %s \n", app.conf.Get("PORT"))
 }
 
 func (app *App) RegisterStartHooks(hook func()) {
@@ -72,4 +82,12 @@ func (app *App) runShutdownHooks() error {
 		hook()
 	}
 	return nil
+}
+
+func env[T any](key string, def T) T {
+	v := os.Getenv(key)
+	if v == "" {
+		return def
+	}
+	return any(v).(T)
 }

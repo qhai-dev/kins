@@ -6,7 +6,7 @@ loadbalance 负载均衡
 logging 日志
 rest web服务
 rpc  grpc 服务
-telemetry 可观测
+telemetry 观测
 timeout 超时
 retry 重试
 cache 缓存
