@@ -26,7 +26,6 @@ func (r *runtime) ZapV() zapcore.Level {
 	return -zapcore.Level(atomic.LoadUint32(&r.v))
 }
 
-// Enabled implements the zapcore.LevelEnabler interface.
 func (r *runtime) Enabled(level zapcore.Level) bool {
 	return level >= r.ZapV()
 }

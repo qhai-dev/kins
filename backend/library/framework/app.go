@@ -50,6 +50,7 @@ func New(opts ...Option) *App {
 
 func (app *App) Run() {
 	fmt.Printf("app name %s \n", app.conf.Get("PORT"))
+	initiallize()
 }
 
 func (app *App) RegisterStartHooks(hook func()) {
@@ -90,4 +91,8 @@ func env[T any](key string, def T) T {
 		return def
 	}
 	return any(v).(T)
+}
+
+func initiallize() {
+
 }

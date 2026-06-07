@@ -15,6 +15,11 @@ type Configuration interface {
 	Watch() error
 }
 
+// todo
+type Conf struct {
+	viper *viper.Viper
+}
+
 func New() *viper.Viper {
 	v := viper.New()
 
@@ -22,11 +27,8 @@ func New() *viper.Viper {
 
 	os.Setenv("PORT", "8080")
 
-	// Alternatively, you can create a new viper instance
-	// var runtime_viper = viper.New()
-
 	v.AddRemoteProvider("etcd3", "http://127.0.0.1:4001", "/config/hugo.yml")
-	v.SetConfigType("yaml") // because there is no file extension in a stream of bytes, supported extensions are "json", "toml", "yaml", "yml", "properties", "props", "prop", "env", "dotenv"
+	v.SetConfigType("yaml")
 
 	err := v.ReadRemoteConfig()
 	if err != nil {
