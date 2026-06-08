@@ -1,19 +1,23 @@
-"use client";
-import { useTheme } from "next-themes";
-import { Button } from "@kairo/shadcn-semi";
+"use client"
+import { Button } from "@kairo/shadcn-semi"
+import { useTheme } from "next-themes"
 
 export function ThemeToggle() {
-	const { theme, setTheme } = useTheme();
+	const { theme, setTheme } = useTheme()
 
 	function onThemeChange() {
 		if (theme === "system") {
-			const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-			setTheme(systemTheme === "dark" ? "light" : "dark");
+			const systemTheme = window.matchMedia(
+				"(prefers-color-scheme: dark)",
+			).matches
+				? "dark"
+				: "light"
+			setTheme(systemTheme === "dark" ? "light" : "dark")
 		} else {
-			setTheme(theme === "dark" ? "light" : "dark");
+			setTheme(theme === "dark" ? "light" : "dark")
 		}
 	}
-	// theme="outline"
+
 	// className="hover:bg-hover-0 size-8 rounded-lg border-none p-1.5 text-black dark:text-white"
 	return (
 		<Button variant="ghost" onClick={onThemeChange}>
@@ -37,5 +41,5 @@ export function ThemeToggle() {
 				<path d="M12 19.6l8.85 -8.85" />
 			</svg>
 		</Button>
-	);
+	)
 }

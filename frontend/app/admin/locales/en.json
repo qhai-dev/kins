@@ -17,10 +17,11 @@
 		"signin": "account log in",
 		"dashboard": "dashboard"
 	},
-	"common": {
-		"back": "Back"
-	},
 	"app": {
 		"title": "operation management system"
+	},
+	"agentic": {
+		"metadata": {},
+		"pages": {}
 	}
 }

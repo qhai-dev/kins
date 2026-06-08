@@ -1,6 +1,6 @@
-import { PropsWithChildren } from "react";
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider } from "next-intl"
+import { PropsWithChildren } from "react"
 
 export default function NextIntlProvider({ children }: PropsWithChildren) {
-	return <NextIntlClientProvider>{children}</NextIntlClientProvider>;
+	return <NextIntlClientProvider>{children}</NextIntlClientProvider>
 }
