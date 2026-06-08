@@ -1,5 +1,7 @@
 import { DirectionProvider, useDirection } from "@base-ui/react";
 
+import type { TextDirection } from "@base-ui/react";
+
 export { Button } from "./components/button";
 
 export { toast, ToastProvider } from "./components/toast";
@@ -13,16 +15,16 @@ export * from "./components/dropdown";
 export { Input } from "./components/input";
 
 export {
-	Field,
-	FieldLabel,
-	FieldDescription,
-	FieldError,
-	FieldGroup,
-	FieldLegend,
-	FieldSeparator,
-	FieldSet,
-	FieldContent,
-	FieldTitle,
+  Field,
+  FieldLabel,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLegend,
+  FieldSeparator,
+  FieldSet,
+  FieldContent,
+  FieldTitle,
 } from "./components/form/Field";
 
 export { Globe } from "./icon";
@@ -30,32 +32,39 @@ export { Globe } from "./icon";
 export { Separator } from "./components/separator";
 
 export {
-	Sidebar,
-	SidebarContent,
-	SidebarFooter,
-	SidebarGroup,
-	SidebarGroupAction,
-	SidebarGroupContent,
-	SidebarGroupLabel,
-	SidebarHeader,
-	SidebarInput,
-	SidebarInset,
-	SidebarMenu,
-	SidebarMenuAction,
-	SidebarMenuBadge,
-	SidebarMenuButton,
-	SidebarMenuItem,
-	SidebarMenuSkeleton,
-	SidebarMenuSub,
-	SidebarMenuSubButton,
-	SidebarMenuSubItem,
-	SidebarProvider,
-	SidebarRail,
-	SidebarSeparator,
-	SidebarTrigger,
-	useSidebar,
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupAction,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarInput,
+  SidebarInset,
+  SidebarMenu,
+  SidebarMenuAction,
+  SidebarMenuBadge,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSkeleton,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
+  SidebarProvider,
+  SidebarRail,
+  SidebarSeparator,
+  SidebarTrigger,
+  useSidebar,
 } from "./components/sidebar";
 
-export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./components/tooltip";
+export {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./components/tooltip";
+
+export type Direction = TextDirection;
 
 export { DirectionProvider, useDirection };

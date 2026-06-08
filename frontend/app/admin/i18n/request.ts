@@ -6,7 +6,7 @@ export default getRequestConfig(async () => {
 	const cookieStore = await cookies();
 	const t = cookieStore.get(process.env.LOCALE_COOKIE_KEY)?.value as Locale;
 
-	const locale = t || "zh-CN";
+	const locale = t || "zh";
 
 	return {
 		locale,

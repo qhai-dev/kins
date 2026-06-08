@@ -1,48 +1,35 @@
-import { DirectionProvider, ToastProvider, TooltipProvider } from "@kairo/shadcn-semi"
-import type { Metadata } from "next"
-import { getLocale, getTranslations } from "next-intl/server"
-import { PropsWithChildren } from "react"
+import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
+import { PropsWithChildren } from "react";
 // import { languages } from "@/i18n/language";
 
-import NextIntlProvider from "@/contexts/next-intl-context"
-import NextThemeProvider from "@/contexts/next-theme-context"
-import TanstackQueryProvider from "@/contexts/tanstack-query-context"
+import NextIntlProvider from "@/contexts/next-intl-context";
 
-import "./globals.css"
+import AppInitializer from "@/components/app-initializer";
+import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
-	const t = await getTranslations("app")
+  const t = await getTranslations("app");
 
-	return {
-		title: {
-			template: `%s-${t("title")}`,
-			default: t("title"),
-		},
-	}
+  return {
+    title: {
+      template: `%s-${t("title")}`,
+      default: t("title"),
+    },
+  };
 }
 
-// type Direction = "ltr" | "rtl";
-
 export default async function Layout({ children }: PropsWithChildren) {
-	const lang = await getLocale()
-	// const { dir } = languages[locale];
-	const dir = "ltr"
+  const lang = await getLocale();
+  const dir = "ltr";
 
-	return (
-		<html lang={lang} dir={dir} suppressHydrationWarning>
-			<body className="h-full select-auto overflow-hidden">
-				<NextIntlProvider>
-					<NextThemeProvider>
-						<TanstackQueryProvider>
-							<DirectionProvider direction={dir}>
-								<ToastProvider>
-									<TooltipProvider>{children}</TooltipProvider>
-								</ToastProvider>
-							</DirectionProvider>
-						</TanstackQueryProvider>
-					</NextThemeProvider>
-				</NextIntlProvider>
-			</body>
-		</html>
-	)
+  return (
+    <html lang={lang} dir={dir} suppressHydrationWarning>
+      <body className="h-full select-auto overflow-hidden">
+        <NextIntlProvider>
+          <AppInitializer dir={dir}>{children}</AppInitializer>
+        </NextIntlProvider>
+      </body>
+    </html>
+  );
 }
