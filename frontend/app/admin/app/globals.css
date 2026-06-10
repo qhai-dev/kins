@@ -12,6 +12,7 @@
 }
 
 html[data-theme="dark"] {
+    color-scheme: dark;
     /*--foreground: #0f0f0f;*/
     --background: #1a1a1a;
     --foreground: #000000;
@@ -22,6 +23,11 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
+    color-scheme: light;
+    /* oklch(0.2103 0.0059 285.89);*/
+    /*--black: oklch(0% 0 0);*/
+    /*--snow: oklch(0.9911 0 0);*/
+
     --background: #f3f3f3;
     --foreground: #ffffff;
     /*--background: oklch(0.94 0.0071 268.55);*/
