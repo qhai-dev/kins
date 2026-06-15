@@ -1,0 +1,1 @@
+export { defaultGenerateMetadata } from "./metedata"

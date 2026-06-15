@@ -1,3 +1,1 @@
-export default function Page() {
-	return <div>agentios</div>
-}
+export { Agentic as default } from "@/pages/agentic"

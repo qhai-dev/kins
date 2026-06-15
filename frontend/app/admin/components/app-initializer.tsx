@@ -1,29 +1,15 @@
 "use client"
 
-import {
-	DirectionProvider,
-	ToastProvider,
-	TooltipProvider,
-} from "@kairo/shadcn-semi"
+import { DirectionProvider, ToastProvider, TooltipProvider } from "@kairo/shadcn-semi"
 import type { Direction } from "@kairo/shadcn-semi"
 import { PropsWithChildren } from "react"
 
-import NextThemeProvider from "@/contexts/next-theme-context"
-import TanstackQueryProvider from "@/contexts/tanstack-query-context"
-
-export default function AppInitializer({
-	children,
-	dir,
-}: PropsWithChildren<{ dir: Direction }>) {
-	return (
-		<NextThemeProvider>
-			<TanstackQueryProvider>
-				<DirectionProvider direction={dir}>
-					<ToastProvider>
-						<TooltipProvider>{children}</TooltipProvider>
-					</ToastProvider>
-				</DirectionProvider>
-			</TanstackQueryProvider>
-		</NextThemeProvider>
-	)
+export default function AppInitializer({ children, dir }: PropsWithChildren<{ dir: Direction }>) {
+    return (
+        <DirectionProvider direction={dir}>
+            <ToastProvider>
+                <TooltipProvider>{children}</TooltipProvider>
+            </ToastProvider>
+        </DirectionProvider>
+    )
 }

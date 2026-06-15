@@ -1,3 +1,1 @@
-export default function Page() {
-	return <div>skills page</div>
-}
+export { Skill as default } from "@/pages/skill"
