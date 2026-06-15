@@ -1,3 +1,6 @@
+@import '../styles/_variables.scss';
+@import '../styles/_keyframe-animations.scss';
+
 @import "tailwindcss";
 @import "@kairo/shadcn-semi/styles.css";
 @import "@kairo/chat/styles.css";
@@ -93,7 +96,6 @@ html[data-theme="dark"] {
     /*--background: oklch(12% 0.0015 253.83);*/
     /*--foreground: oklch(99.11% 0.0015 253.83);*/
     /*--separator: oklch(25% 0.0015 253.83);*/
-
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
