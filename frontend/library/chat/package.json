@@ -6,9 +6,6 @@
         ".": "./src/index.ts",
         "./styles.css": "./src/styles.css"
     },
-    "scripts": {
-        "test": "echo \"hello run test chat\""
-    },
     "dependencies": {
         "@floating-ui/dom": "^1.7.6",
         "@kairo/shadcn-semi": "workspace:*",
