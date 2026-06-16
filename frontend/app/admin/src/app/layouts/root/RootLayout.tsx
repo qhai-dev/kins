@@ -1,12 +1,29 @@
+import { hasLocale } from "next-intl"
+import { setRequestLocale } from "next-intl/server"
+import { notFound } from "next/navigation"
 import { PropsWithChildren } from "react"
 
-import { TanstackQueryProvider, NextIntlProvider, NextThemesProvider } from "../../provider"
+import { routing, languages } from "@/shared/i18n"
 
 import "../../styles/index.css"
+import { TanstackQueryProvider, NextIntlProvider, NextThemesProvider } from "../../provider"
 
-export function RootLayout({ children }: PropsWithChildren) {
+export async function RootLayout({
+    children,
+    params,
+}: PropsWithChildren<{
+    params: Promise<{ locale: string }>
+}>) {
+    const { locale } = await params
+    if (!hasLocale(routing.locales, locale)) {
+        notFound()
+    }
+
+    setRequestLocale(locale)
+    const dir = languages[locale]?.dir
+
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang={locale} dir={dir} suppressHydrationWarning>
             <body className="h-full overflow-hidden select-auto">
                 <NextIntlProvider>
                     <NextThemesProvider>

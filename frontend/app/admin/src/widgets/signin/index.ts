@@ -1,2 +1,2 @@
-export { LocaleSwitch } from "./locale-switch"
+export { LocaleSwitcher } from "./locale-switcher"
 export { ThemeToggle } from "./theme-toggle"

@@ -1,1 +1,0 @@
-export { LocaleSwitch } from "./LocaleSwitch"

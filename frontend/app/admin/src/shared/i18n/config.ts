@@ -1,18 +1,14 @@
 export const languages = {
-    zh: {
+    "zh-CN": {
         name: "简体中文",
         dir: "ltr",
     },
-    en: {
+    "en-US": {
         name: "English",
         dir: "ltr",
     },
-    ar: {
+    "ar-SA": {
         name: "العربية",
         dir: "rtl",
     },
 } as const
-
-export type Locale = keyof typeof languages
-
-export const locales = ["zh", "en", "ar"] as Locale[]
