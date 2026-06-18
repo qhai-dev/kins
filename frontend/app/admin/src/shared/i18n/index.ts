@@ -1,4 +1,3 @@
-export { languages } from "./config"
-
-export { routing } from "./routing"
-export { Link, redirect, usePathname, useRouter, getPathname } from "./navigation"
+export { languages, locales } from "./const"
+export { setCookieLocale, getCookieLocale } from "./cookie"
+export type { Locale } from "./dictionaries"

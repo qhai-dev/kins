@@ -1,20 +1,17 @@
-import { hasLocale } from "next-intl"
 import { getRequestConfig } from "next-intl/server"
 
-import { routing } from "./routing"
+import { defaultLocale } from "./const"
+import { getCookieLocale } from "./cookie"
+import { getDictionary } from "./dictionaries"
 
-export default getRequestConfig(async ({ requestLocale }) => {
-    const requested = await requestLocale
+export default getRequestConfig(async () => {
+    const cookieLocale = await getCookieLocale()
 
-    let locale = routing.defaultLocale
-    if (hasLocale(routing.locales, requested)) {
-        locale = requested
-    }
+    const locale = cookieLocale || defaultLocale
 
-    const { default: defaultMessages } = await import(`../messages/${locale}.json`)
-
+    const dict = await getDictionary(locale)
     return {
         locale,
-        messages: defaultMessages,
+        messages: dict,
     }
 })

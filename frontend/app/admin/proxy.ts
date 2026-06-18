@@ -1,8 +1,8 @@
-import createMiddleware from "next-intl/middleware"
+import { NextResponse } from "next/server"
 
-import { routing } from "./src/shared/i18n"
-
-export default createMiddleware(routing)
+export function proxy() {
+    return NextResponse.next()
+}
 
 export const config = {
     matcher: "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
