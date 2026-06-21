@@ -1,1 +1,4 @@
+# Change symlink prefix to reduce workspace clutter.
+# This moves bazel-bin / bazel-out / bazel-testlogs under a hidden ".bazel/" directory.
+# Keeps the project root directory clean while preserving symlink functionality.
 common --symlink_prefix=.bazel/
