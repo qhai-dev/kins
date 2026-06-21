@@ -1,1 +1,1 @@
-# Kairo
+# Kairo frontend

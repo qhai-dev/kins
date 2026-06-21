@@ -19,6 +19,9 @@ go_sdk = use_extension(
 go_sdk.download(
     version = "1.26.1",
 )
+use_repo(
+    go_sdk,
+)
 
 go_deps = use_extension(
     "@gazelle//:extensions.bzl",
@@ -27,7 +30,6 @@ go_deps = use_extension(
 go_deps.from_file(
     go_work = "//:go.work",
 )
-
 use_repo(
     go_deps,
 )
