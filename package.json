@@ -2,10 +2,13 @@
     "name": "kairo",
     "private": true,
     "scripts": {
-        "fmt": "pnpm oxfmt"
+        "fmt": "pnpm vp fmt"
     },
     "devDependencies": {
-        "oxfmt": "^0.48.0",
-        "oxlint": "^1.66.0"
+        "@voidzero-dev/vite-plus-core": "^0.2.1",
+        "vite-plus": "^0.2.1"
+    },
+    "engines": {
+        "node": "22.21.1"
     }
 }
