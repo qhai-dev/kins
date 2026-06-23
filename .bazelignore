@@ -1,6 +1,4 @@
 # Bazel skips these directories during package loading.
 # This is required because some Bazel commands (build //..., query) load
 # packages directly without consulting BUILD-level directives.
-deploy
 frontend
-scripts
