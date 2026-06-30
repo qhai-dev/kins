@@ -50,8 +50,8 @@ bazel_dep(
 
 buf = use_extension("@rules_buf//buf:extensions.bzl", "buf")
 buf.toolchains(
-    version = "v1.71.0",
     sha256 = "9fa69dd51837106d688687dbe5ab63cbef41cb09ff362284c3e90dcedb126dab",
+    version = "v1.71.0",
 )
 use_repo(buf, "rules_buf_toolchains")
 
@@ -86,6 +86,7 @@ bazel_dep(
 )
 
 pull = use_repo_rule("@rules_img//img:pull.bzl", "pull")
+
 pull(
     name = "distroless",
     digest = "sha256:838610585824d0141daf5d76af5778f59a6f9dcc1a822148c790c9043c89e8eb",
