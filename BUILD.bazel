@@ -1,9 +1,8 @@
 load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
-load("@gazelle//:go_tools.bzl", "GO_TOOLS")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@rules_buf//buf:defs.bzl", "buf_format")
 
-npm_link_all_packages()
+npm_link_all_packages(name = "node_modules")
 
 exports_files(
     ["buf.yaml"],
