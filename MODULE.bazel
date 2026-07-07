@@ -56,7 +56,7 @@ buf.toolchains(
     sha256 = "9fa69dd51837106d688687dbe5ab63cbef41cb09ff362284c3e90dcedb126dab",
     version = "v1.71.0",
 )
-use_repo(buf, "buf_toolchains")
+# use_repo(buf, "buf_toolchains")
 
 bazel_dep(
     name = "rules_shell",
@@ -138,3 +138,14 @@ typescript.deps(
     ts_version_from = "//:package.json",
 )
 use_repo(typescript, "typescript")
+
+bazel_dep(
+    name = "rules_multitool",
+    version = "1.11.1",
+)
+
+multitool = use_extension("@rules_multitool//multitool:extension.bzl", "multitool")
+multitool.hub(
+    lockfile = "//:multitool.lock.json",
+)
+use_repo(multitool, "multitool")
