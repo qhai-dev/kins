@@ -20,6 +20,7 @@ gazelle_binary(
 
 # gazelle:prefix github.com/qhai-dev/kairo
 
+# gazelle:exclude .devcontainer
 # gazelle:exclude deploy
 # gazelle:exclude docs
 # gazelle:exclude frontend
