@@ -6,5 +6,4 @@ export default {
         stats: true,
     },
     mini: {},
-    h5: {},
 } satisfies UserConfigExport<"webpack5">
