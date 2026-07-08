@@ -1,32 +1,38 @@
 load("@protobuf//bazel:proto_library.bzl", "proto_library")
 load("@rules_go//go:def.bzl", "go_library")
+load("@rules_go//proto:def.bzl", "go_proto_library")
 
 proto_library(
     name = "v1_proto",
     srcs = ["test2.proto"],
-    strip_import_prefix = "/backend/kapis",
     visibility = ["//visibility:public"],
 )
 
 go_library(
     name = "test2",
-    srcs = [
-        "test2.pb.go",
-        "test2.pb.gw.go",
-        "test2_grpc.pb.go",
-    ],
+    srcs = ["test2.pb.gw.go"],
+    embed = [":v1_go_proto"],
     importpath = "github.com/qhai-dev/kairo/backend/kapis/test2/v1",
     visibility = ["//visibility:public"],
     deps = [
-        "@grpc_ecosystem_grpc_gateway//runtime",
-        "@grpc_ecosystem_grpc_gateway//utilities",
+        "@com_github_grpc_ecosystem_grpc_gateway_v2//runtime",
+        "@com_github_grpc_ecosystem_grpc_gateway_v2//utilities",
         "@org_golang_google_grpc//:grpc",
         "@org_golang_google_grpc//codes",
         "@org_golang_google_grpc//grpclog",
         "@org_golang_google_grpc//metadata",
         "@org_golang_google_grpc//status",
         "@org_golang_google_protobuf//proto",
-        "@org_golang_google_protobuf//reflect/protoreflect",
-        "@org_golang_google_protobuf//runtime/protoimpl",
     ],
+)
+
+go_proto_library(
+    name = "v1_go_proto",
+    compilers = [
+        "@rules_go//proto:go_proto",
+        "@rules_go//proto:go_grpc_v2",
+    ],
+    importpath = "github.com/qhai-dev/kairo/backend/kapis/test2/v1",
+    proto = ":v1_proto",
+    visibility = ["//visibility:public"],
 )
