@@ -1,0 +1,4 @@
+exports_files(
+    ["multitool.lock.json"],
+    visibility = ["//visibility:public"],
+)
