@@ -11,8 +11,8 @@ go_sdk = use_extension(
     "@rules_go//go:extensions.bzl",
     "go_sdk",
 )
-go_sdk.download(
-    version = "1.26.4",
+go_sdk.from_file(
+    go_work = "//:go.work",
 )
 
 go_deps = use_extension(
@@ -93,10 +93,9 @@ bazel_dep(
 
 node = use_extension("@rules_nodejs//nodejs:extensions.bzl", "node")
 node.toolchain(
-    name = "node",
-    node_version = "24.18.0",
+    node_version_from_nvmrc = "//:.nvmrc",
 )
-use_repo(node, "node")
+use_repo(node, "nodejs_toolchains")
 
 npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
 npm.npm_translate_lock(
@@ -115,7 +114,11 @@ use_repo(pnpm, "pnpm")
 
 typescript = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext")
 typescript.deps(
-    name = "typescript",
     ts_version_from = "//:package.json",
 )
-use_repo(typescript, "typescript")
+use_repo(typescript, "npm_typescript")
+
+bazel_dep(
+    name = "bazel_env.bzl",
+    version = "0.8.0",
+)
