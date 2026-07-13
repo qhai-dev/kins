@@ -1,5 +1,4 @@
 .git
-.config
 .devcontainer
 docs
 node_modules
