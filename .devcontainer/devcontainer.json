@@ -5,7 +5,7 @@
     },
     "postCreateCommand": "./.devcontainer/post_create.sh",
     "features": {
-        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+        "ghcr.io/devcontainers-extra/features/kind:1":{},
         "ghcr.io/devcontainers/features/docker-in-docker:4": {},
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers-community/features/bazel:1": {},
