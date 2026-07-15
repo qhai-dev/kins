@@ -1,5 +1,3 @@
-.git
-.devcontainer
 docs
 node_modules
 frontend/app/admin/node_modules
