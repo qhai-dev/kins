@@ -33,3 +33,10 @@ Allow people to use `bazel run @rules_buf_toolchains//:buf -- --version`
 	github.com/sqlc-dev/sqlc/cmd/sqlc@v1.31.1
 	github.com/bazelbuild/buildtools/buildifier
 	github.com/bufbuild/buf/cmd/buf@v1.71.0
+
+
+vault
+terraform
+
+
+consul
