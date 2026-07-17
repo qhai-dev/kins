@@ -15,7 +15,7 @@
         "aarch64-darwin"
       ];
 
-      forAllSystems = f: nixpkgs.lib.genAttrs systems f;
+      forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
       devShells = forAllSystems (
@@ -29,6 +29,7 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               go
+              gopls
               nodejs
               sqlc
               lefthook
