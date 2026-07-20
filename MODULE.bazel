@@ -71,7 +71,6 @@ typescript.deps(
 )
 use_repo(typescript, "npm_typescript")
 
-bazel_dep(name = "aspect_rules_lint", version = "2.7.2")
 bazel_dep(name = "rules_tf", version = "0.0.10")
 
 tf = use_extension("@rules_tf//tf:extensions.bzl", "tf_repositories")
