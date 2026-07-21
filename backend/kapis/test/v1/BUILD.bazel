@@ -10,20 +10,9 @@ proto_library(
 
 go_library(
     name = "test",
-    srcs = ["test.pb.gw.go"],
     embed = [":v1_go_proto"],
     importpath = "github.com/qhai-dev/kairo/backend/kapis/test/v1",
     visibility = ["//visibility:public"],
-    deps = [
-        "@com_github_grpc_ecosystem_grpc_gateway_v2//runtime",
-        "@com_github_grpc_ecosystem_grpc_gateway_v2//utilities",
-        "@org_golang_google_grpc//:grpc",
-        "@org_golang_google_grpc//codes",
-        "@org_golang_google_grpc//grpclog",
-        "@org_golang_google_grpc//metadata",
-        "@org_golang_google_grpc//status",
-        "@org_golang_google_protobuf//proto",
-    ],
 )
 
 go_proto_library(

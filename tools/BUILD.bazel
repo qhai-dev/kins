@@ -7,12 +7,9 @@ exports_files(
 
 bazel_env(
     name = "bazel_env",
-    toolchains = {
-        "nodejs": "@nodejs_toolchains//:resolved_toolchain",
-    },
     tools = {
         "go": "@rules_go//go",
-        "node": "$(NODE_PATH)",
+        "node": "@node",
         "pnpm": "@pnpm",
     } | TOOLS,
 )
