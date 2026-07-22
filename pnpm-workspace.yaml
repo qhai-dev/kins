@@ -1,14 +1,14 @@
 packages:
   - "frontend/app/*"
   - "frontend/kapis"
-  - "frontend/library/*"
+  - "frontend/packages/*"
 allowBuilds:
-  '@parcel/watcher': set this to true or false
-  '@swc/core': set this to true or false
-  '@tarojs/binding': set this to true or false
-  '@tarojs/cli': set this to true or false
-  core-js: set this to true or false
-  core-js-pure: set this to true or false
-  esbuild: set this to true or false
-  msgpackr-extract: set this to true or false
-  sharp: set this to true or false
+  '@parcel/watcher': true
+  '@swc/core': true
+  '@tarojs/binding': true
+  '@tarojs/cli': true
+  core-js: true
+  core-js-pure: true
+  esbuild: true
+  msgpackr-extract: true
+  sharp: true
