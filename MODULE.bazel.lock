@@ -258,7 +258,6 @@
     "https://bcr.bazel.build/modules/rules_kotlin/2.3.20/MODULE.bazel": "3443d53d275e14fecfebd0b491f01d06ea3883c04a1b3336e7ae9d5ec9066bef",
     "https://bcr.bazel.build/modules/rules_kotlin/2.3.20/source.json": "5a5553cffea43f2c5156c8ad0de4a14ad95413ceb39cd4d08f50e2aea86927e8",
     "https://bcr.bazel.build/modules/rules_license/0.0.3/MODULE.bazel": "627e9ab0247f7d1e05736b59dbb1b6871373de5ad31c3011880b4133cafd4bd0",
-    "https://bcr.bazel.build/modules/rules_license/0.0.4/MODULE.bazel": "6a88dd22800cf1f9f79ba32cacad0d3a423ed28efa2c2ed5582eaa78dd3ac1e5",
     "https://bcr.bazel.build/modules/rules_license/0.0.7/MODULE.bazel": "088fbeb0b6a419005b89cf93fe62d9517c0a2b8bb56af3244af65ecfe37e7d5d",
     "https://bcr.bazel.build/modules/rules_license/1.0.0/MODULE.bazel": "a7fda60eefdf3d8c827262ba499957e4df06f659330bbe6cdbdb975b768bb65c",
     "https://bcr.bazel.build/modules/rules_license/1.0.0/source.json": "a52c89e54cc311196e478f8382df91c15f7a2bfdf4c6cd0e2675cc2ff0b56efb",
@@ -269,7 +268,6 @@
     "https://bcr.bazel.build/modules/rules_nodejs/6.7.5/MODULE.bazel": "97e6794043821d23c013baa4a50fd1c599f2e6ae92b06e2c5f1cd7074fd83e7c",
     "https://bcr.bazel.build/modules/rules_nodejs/6.7.5/source.json": "d60ee5a76258b1c8f99545ed24172b44d43ba64ca1a2dfc04371ef203df19fdf",
     "https://bcr.bazel.build/modules/rules_pkg/0.7.0/MODULE.bazel": "df99f03fc7934a4737122518bb87e667e62d780b610910f0447665a7e2be62dc",
-    "https://bcr.bazel.build/modules/rules_pkg/0.9.1/MODULE.bazel": "af00144208c4be503bc920d043ba3284fb37385b3f6160b4a4daf4df80b4b823",
     "https://bcr.bazel.build/modules/rules_pkg/1.0.1/MODULE.bazel": "5b1df97dbc29623bccdf2b0dcd0f5cb08e2f2c9050aab1092fd39a41e82686ff",
     "https://bcr.bazel.build/modules/rules_pkg/1.0.1/source.json": "bd82e5d7b9ce2d31e380dd9f50c111d678c3bdaca190cb76b0e1c71b05e1ba8a",
     "https://bcr.bazel.build/modules/rules_proto/4.0.0/MODULE.bazel": "a7a7b6ce9bee418c1a760b3d84f83a299ad6952f9903c67f19e4edd964894e06",
@@ -310,8 +308,6 @@
     "https://bcr.bazel.build/modules/rules_swift/2.1.1/MODULE.bazel": "494900a80f944fc7aa61500c2073d9729dff0b764f0e89b824eb746959bc1046",
     "https://bcr.bazel.build/modules/rules_swift/2.4.0/MODULE.bazel": "1639617eb1ede28d774d967a738b4a68b0accb40650beadb57c21846beab5efd",
     "https://bcr.bazel.build/modules/rules_swift/3.1.2/MODULE.bazel": "72c8f5cf9d26427cee6c76c8e3853eb46ce6b0412a081b2b6db6e8ad56267400",
-    "https://bcr.bazel.build/modules/rules_tf/0.0.10/MODULE.bazel": "fa7cbb2fab4421b16d308aff85f87ae1a703e9260fabf6650136e86fa917b7c7",
-    "https://bcr.bazel.build/modules/rules_tf/0.0.10/source.json": "bd06d19b7294c7c3364677c9b7ae4531c60186297d7421ea784cdb030752eefb",
     "https://bcr.bazel.build/modules/stardoc/0.5.1/MODULE.bazel": "1a05d92974d0c122f5ccf09291442580317cdd859f07a8655f1db9a60374f9f8",
     "https://bcr.bazel.build/modules/stardoc/0.5.3/MODULE.bazel": "c7f6948dae6999bf0db32c1858ae345f112cacf98f174c7a8bb707e41b974f1c",
     "https://bcr.bazel.build/modules/stardoc/0.5.4/MODULE.bazel": "6569966df04610b8520957cb8e97cf2e9faac2c0309657c537ab51c16c18a2a4",
@@ -342,30 +338,6 @@
   },
   "selectedYankedVersions": {},
   "moduleExtensions": {
-    "@@aspect_rules_ts+//ts:extensions.bzl%ext": {
-      "general": {
-        "bzlTransitiveDigest": "mQ2hgjH48OPEVHLWstlk7iwsBJoO6If95LJC8Y46p/U=",
-        "usagesDigest": "olcCiz8X1Dze17k22MWv94JdIt/fEmoP5DEhe4AzOk4=",
-        "recordedInputs": [
-          "REPO_MAPPING:aspect_rules_ts+,aspect_rules_ts aspect_rules_ts+",
-          "REPO_MAPPING:aspect_rules_ts+,bazel_tools bazel_tools",
-          "FILE:@@//package.json d746cf7f84f8ddc31222b379eea4226f891f4c5cdc5dca459a832c3174286ec3"
-        ],
-        "generatedRepoSpecs": {
-          "npm_typescript": {
-            "repoRuleId": "@@aspect_rules_ts+//ts/private:npm_repositories.bzl%http_archive_version",
-            "attributes": {
-              "version": "",
-              "version_from": "@@//:package.json",
-              "integrity": "",
-              "urls": [
-                "https://registry.npmjs.org/typescript/-/typescript-{}.tgz"
-              ]
-            }
-          }
-        }
-      }
-    },
     "@@aspect_tools_telemetry+//:extension.bzl%telemetry": {
       "general": {
         "bzlTransitiveDigest": "4w9RM0xjdKo1crk5zL20a/TuhqO0P1z1LsuXDneBXD4=",
@@ -1032,110 +1004,6 @@
           "explicitRootModuleDirectDevDeps": [],
           "useAllRepos": "NO",
           "reproducible": false
-        }
-      }
-    },
-    "@@rules_tf+//tf:extensions.bzl%tf_repositories": {
-      "os:linux,arch:amd64": {
-        "bzlTransitiveDigest": "jvXnIy1bwunXmHKBzTHzrWBPNzxh0Qimi93KV5SOA1c=",
-        "usagesDigest": "LuX79d6TBZzWzWTAF9+ttMEMHeemqc6Cdx1ShRvEARA=",
-        "recordedInputs": [
-          "REPO_MAPPING:rules_tf+,rules_tf rules_tf+"
-        ],
-        "generatedRepoSpecs": {
-          "main___download_tfdoc_0_linux_amd64": {
-            "repoRuleId": "@@rules_tf+//tf/toolchains/tfdoc:toolchain.bzl%tfdoc_download",
-            "attributes": {
-              "version": "0.18.0",
-              "os": "linux",
-              "arch": "amd64"
-            }
-          },
-          "main___download_tflint_0_linux_amd64": {
-            "repoRuleId": "@@rules_tf+//tf/toolchains/tflint:toolchain.bzl%tflint_download",
-            "attributes": {
-              "version": "0.51.1",
-              "os": "linux",
-              "arch": "amd64"
-            }
-          },
-          "main___download_tf_0_linux_amd64": {
-            "repoRuleId": "@@rules_tf+//tf/toolchains/terraform:toolchain.bzl%terraform_download",
-            "attributes": {
-              "version": "1.24.1",
-              "os": "linux",
-              "arch": "amd64",
-              "mirror": {}
-            }
-          },
-          "tf_toolchains": {
-            "repoRuleId": "@@rules_tf+//tf:toolchains.bzl%tf_toolchains",
-            "attributes": {
-              "tflint_repos": [
-                "main___download_tflint_0_linux_amd64"
-              ],
-              "tfdoc_repos": [
-                "main___download_tfdoc_0_linux_amd64"
-              ],
-              "terraform_repos": [
-                "main___download_tf_0_linux_amd64"
-              ],
-              "tofu_repos": [],
-              "os": "linux",
-              "arch": "amd64"
-            }
-          }
-        }
-      },
-      "os:osx,arch:aarch64": {
-        "bzlTransitiveDigest": "jvXnIy1bwunXmHKBzTHzrWBPNzxh0Qimi93KV5SOA1c=",
-        "usagesDigest": "LuX79d6TBZzWzWTAF9+ttMEMHeemqc6Cdx1ShRvEARA=",
-        "recordedInputs": [
-          "REPO_MAPPING:rules_tf+,rules_tf rules_tf+"
-        ],
-        "generatedRepoSpecs": {
-          "main___download_tfdoc_0_darwin_arm64": {
-            "repoRuleId": "@@rules_tf+//tf/toolchains/tfdoc:toolchain.bzl%tfdoc_download",
-            "attributes": {
-              "version": "0.18.0",
-              "os": "darwin",
-              "arch": "arm64"
-            }
-          },
-          "main___download_tflint_0_darwin_arm64": {
-            "repoRuleId": "@@rules_tf+//tf/toolchains/tflint:toolchain.bzl%tflint_download",
-            "attributes": {
-              "version": "0.51.1",
-              "os": "darwin",
-              "arch": "arm64"
-            }
-          },
-          "main___download_tf_0_darwin_arm64": {
-            "repoRuleId": "@@rules_tf+//tf/toolchains/terraform:toolchain.bzl%terraform_download",
-            "attributes": {
-              "version": "1.24.1",
-              "os": "darwin",
-              "arch": "arm64",
-              "mirror": {}
-            }
-          },
-          "tf_toolchains": {
-            "repoRuleId": "@@rules_tf+//tf:toolchains.bzl%tf_toolchains",
-            "attributes": {
-              "tflint_repos": [
-                "main___download_tflint_0_darwin_arm64"
-              ],
-              "tfdoc_repos": [
-                "main___download_tfdoc_0_darwin_arm64"
-              ],
-              "terraform_repos": [
-                "main___download_tf_0_darwin_arm64"
-              ],
-              "tofu_repos": [],
-              "os": "darwin",
-              "arch": "arm64"
-            }
-          }
         }
       }
     },

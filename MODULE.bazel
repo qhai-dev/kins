@@ -12,6 +12,8 @@ use_repo(
     "com_github_go_logr_logr",
     "com_github_go_logr_zapr",
     "com_github_google_wire",
+    "com_github_pulumi_pulumi_aws_sdk_v7",
+    "com_github_pulumi_pulumi_sdk_v3",
     "com_github_spf13_viper",
     "com_github_spf13_viper_remote",
     "io_etcd_go_etcd_client_v3",
@@ -79,16 +81,6 @@ typescript.deps(
     ts_version_from = "//:package.json",
 )
 use_repo(typescript, "npm_typescript")
-
-bazel_dep(name = "rules_tf", version = "0.0.10")
-
-tf = use_extension("@rules_tf//tf:extensions.bzl", "tf_repositories")
-tf.download(
-    mirror = {
-    },
-    version = "1.24.1",
-)
-use_repo(tf, "tf_toolchains")
 
 bazel_dep(name = "rules_multitool", version = "1.11.1")
 
