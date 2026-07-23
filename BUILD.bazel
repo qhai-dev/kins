@@ -17,14 +17,14 @@ gazelle(
 )
 
 mdbook(
-    name = "book",
+    name = "docs",
     srcs = [
-        "//docs",
+        "//docs:all_docs",
     ],
     book = "book.toml",
 )
 
 mdbook_server(
-    name = "book_server",
-    book = ":book",
+    name = "docs_server",
+    book = ":docs",
 )

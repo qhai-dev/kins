@@ -1,9 +1,7 @@
+package(default_visibility = ["//visibility:public"])
+
 filegroup(
-    name = "docs",
-    srcs = glob([
-        "**/*.md",
-    ]),
-    visibility = [
-        "//visibility:public",
-    ],
+    name = "all_docs",
+    srcs = glob(["*"]),
+    visibility = ["//:__subpackages__"],
 )
